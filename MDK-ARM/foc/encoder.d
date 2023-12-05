@@ -36,4 +36,7 @@ foc/encoder.o: ..\Ctrl\src\encoder.c ..\Ctrl\inc\encoder.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_spi.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_spi_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim.h \
-  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h
+  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
+  ..\Lib\inc\util.h \
+  F:\Keil_MDK\InstallFile\ARM\ARMCLANG\Bin\..\include\math.h \
+  ..\Ctrl\inc\board.h

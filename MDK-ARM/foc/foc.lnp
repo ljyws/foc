@@ -51,8 +51,10 @@
 "foc\axis.o"
 "foc\rgb.o"
 "foc\encoder.o"
+"foc\board.o"
 "foc\main_help.o"
 "foc\vofa.o"
+"foc\util.o"
 --strict --scatter "foc\foc.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -4,6 +4,11 @@
 #include "stdint.h"
 #include "stdbool.h"
 #include "spi.h"
+#include "util.h"
+#include "board.h"
+#include "math.h"
+#define MODE_FLAG_ABS 0x100
+
 typedef enum
 {
 	ENC_MODE_INCREMENTAL = 0,
@@ -21,9 +26,11 @@ typedef struct
 	int32_t phase_offset;       
 	float phase_offset_float; 
 	int32_t cpr;   
+	int32_t direction;
 	float index_offset;
 	bool use_index;
 	bool pre_calibrated ; 
+	bool enable_phase_interpolation;
 }EncoderConfig_t;
 
 typedef struct
@@ -53,12 +60,13 @@ typedef struct
 
 Encoder_t encoder_;
 
-void encoder_init();
+void encoder_init(Encoder_t *encoder_);
 
-void encoder_sample_now();
+void encoder_sample_now(Encoder_t *encoder_);
 
-void encoder_spi_cb();
+void encoder_spi_cb(Encoder_t *encoder_);
 
+void encoder_update(Encoder_t *encoder_);
 
 #endif
 
