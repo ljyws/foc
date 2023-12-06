@@ -52,6 +52,7 @@
 "foc\rgb.o"
 "foc\encoder.o"
 "foc\board.o"
+"foc\motor.o"
 "foc\main_help.o"
 "foc\vofa.o"
 "foc\util.o"

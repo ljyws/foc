@@ -126,13 +126,13 @@ void encoder_update(Encoder_t *encoder_)
 	}
 	float interpolated_enc = corrected_enc + encoder_->interpolation_;
 	
-	//float enec_rad_per_enc = motor.config.pole_pairs * 2.0f * M_PI * (1.0f / (float)(encoder_->config_.cpr)); 
-	//float ph = enec_rad_per_enc * (interpolated_enc - encoder_->config_.phase_offset_float);
+	float enec_rad_per_enc = motor.config_.pole_pairs * 2.0f * M_PI * (1.0f / (float)(encoder_->config_.cpr)); 
+	float ph = enec_rad_per_enc * (interpolated_enc - encoder_->config_.phase_offset_float);
 	
 	if(encoder_->is_ready_)
 	{
-		//encoder_->phase_ = wrap_pm(ph) * encoder_->config_.direction;
-		//encoder_->phase_vel_ = (2.0f * M_PI) * encoder_->vel_estimate_ * motor.config.pole_pairs * encoder_->config_.direction;
+		encoder_->phase_ = wrap_pm_pi(ph) * encoder_->config_.direction;
+		encoder_->phase_vel_ = (2.0f * M_PI) * encoder_->vel_estimate_ * motor.config_.pole_pairs * encoder_->config_.direction;
 	}
 	
 }

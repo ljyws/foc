@@ -3,6 +3,12 @@
 
 #include "math.h"
 
+#define M_PI 3.14159265358979323846f
+#define one_by_sqrt3 0.57735026919f
+#define two_by_sqrt3 1.15470053838f
+#define sqrt3_by_2 0.86602540378f
+
+
 inline int mod(const int dividend, const int divisor)
 {
   int r = dividend % divisor;
@@ -25,7 +31,10 @@ static inline float wrap_pm(float x, float pm_range)
   return fmodf_pos(x + pm_range, 2.0f * pm_range) - pm_range;
 }
 
-
+inline float wrap_pm_pi(float x) 
+{
+  return wrap_pm(x, 2 * M_PI);
+}
 
 
 #endif

@@ -58,7 +58,7 @@ typedef struct
   bool vel_estimate_valid_;
 }Encoder_t;
 
-Encoder_t encoder_;
+extern Encoder_t encoder;
 
 void encoder_init(Encoder_t *encoder_);
 
