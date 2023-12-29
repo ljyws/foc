@@ -14,6 +14,6 @@ void rgb_set(uint8_t R, uint8_t G, uint8_t B)
 		p[i + 8] 		= (R << i) & (0x80) ? ONE_PULSE : ZERO_PULSE;
 		p[i + 16] 	= (B << i) & (0x80) ? ONE_PULSE : ZERO_PULSE;
 	}
-	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_1,rgb_buffur, (82));
+	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_1,rgb_buffur, (104));
 }
 
