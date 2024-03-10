@@ -1,0 +1,14 @@
+# ninja log v5
+17	219	7316745069307288	CMakeFiles/foc_g4.elf.dir/Core/Src/dma.c.obj	a91d9e2b85b86541
+56	264	7316745069746117	CMakeFiles/foc_g4.elf.dir/Core/Src/gpio.c.obj	c0cf6755276575d5
+41	276	7316745069756086	CMakeFiles/foc_g4.elf.dir/Core/Src/app_freertos.c.obj	b5c93e87562bfd0d
+29	1470	7316745072119862	CMakeFiles/foc_g4.elf.dir/App/board.cpp.obj	1ddfb74925e96e06
+265	1471	7316745071950335	CMakeFiles/foc_g4.elf.dir/Core/Src/spi.c.obj	4957659ccd0710fe
+1	1471	7316745071890485	CMakeFiles/foc_g4.elf.dir/App/Main.cpp.obj	d2bf23e0e739804a
+277	1472	7316745071940359	CMakeFiles/foc_g4.elf.dir/Core/Src/stm32g4xx_hal_msp.c.obj	d7813d9093c486fe
+221	1472	7316745071970276	CMakeFiles/foc_g4.elf.dir/Core/Src/main.c.obj	da351ebd7fd34967
+10	1393	7316745107807309	CMakeFiles/foc_g4.elf.dir/Core/Src/stm32g4xx_hal_timebase_tim.c.obj	f6ebfaa5e93db678
+46	1394	7316745107717539	CMakeFiles/foc_g4.elf.dir/Core/Src/tim.c.obj	a4bb513702d98ed0
+27	1394	7316745107807309	CMakeFiles/foc_g4.elf.dir/Core/Src/syscalls.c.obj	5457d5e7e2afad67
+19	1395	7316745107727520	CMakeFiles/foc_g4.elf.dir/Core/Src/stm32g4xx_it.c.obj	b940665b13e78cd7
+37	1395	7316745107717539	CMakeFiles/foc_g4.elf.dir/Core/Src/sysmem.c.obj	788b8d5570634ef9

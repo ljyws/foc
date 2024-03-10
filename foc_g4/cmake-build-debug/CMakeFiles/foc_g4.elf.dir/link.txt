@@ -1,0 +1,1 @@
+F:\Tools\gcc-arm-none-eabi-7-2018-q2-update-win32\bin\arm-none-eabi-g++.exe -g -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-gc-sections,--print-memory-usage,-Map=F:/Desktop/foc_g4/cmake-build-debug/foc_g4.map -mcpu=cortex-m4 -mthumb -mthumb-interwork -T F:/Desktop/foc_g4/STM32G474RETX_FLASH.ld @CMakeFiles\foc_g4.elf.dir\objects1.rsp -o foc_g4.elf 

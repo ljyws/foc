@@ -1,0 +1,3 @@
+F:/Desktop/foc_g4/cmake-build-debug-mingw/CMakeFiles/foc_g4.elf.dir
+F:/Desktop/foc_g4/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+F:/Desktop/foc_g4/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
