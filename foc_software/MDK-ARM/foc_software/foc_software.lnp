@@ -29,6 +29,7 @@
 "foc_software\system_stm32g4xx.o"
 "foc_software\drv_led.o"
 "foc_software\drv_encoder.o"
+"foc_software\drv_foc.o"
 "foc_software\bsp_gpio_op.o"
 "foc_software\bsp_spi_op.o"
 "foc_software\utils.o"

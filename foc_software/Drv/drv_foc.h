@@ -2,6 +2,7 @@
 #define __DRV_FOC_H__
 
 #include "board.h"
+#include "drv_encoder.h"
 
 typedef struct foc_t foc_t;
 struct foc_t
@@ -41,6 +42,7 @@ struct foc_t
     void (*inverse_clarke)(struct foc_t *self);
     void (*park_transform)(struct foc_t *self);
     void (*inverse_park)(struct foc_t *self);
+    void (*update)(void);
 
 };
 

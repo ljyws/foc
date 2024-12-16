@@ -911,6 +911,16 @@
               <FileType>1</FileType>
               <FilePath>..\Drv\drv_encoder.c</FilePath>
             </File>
+            <File>
+              <FileName>drv_foc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drv\drv_foc.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drv\drv_motor.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

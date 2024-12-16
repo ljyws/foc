@@ -45,4 +45,5 @@ float sat1_datf(float val, float up, float low);
 float fast_atan2(float y, float x);
 float fast_sin_f32(float x);
 float fast_cos_f32(float x);
+int svm(float alpha, float beta, float *tA, float *tB, float *tC);
 #endif

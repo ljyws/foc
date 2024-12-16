@@ -6,4 +6,5 @@ motor_t motor = {
     .config_ = {
         .pre_calibrated = false,
     },
+
 };

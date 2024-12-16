@@ -3,6 +3,7 @@
 
 #include "board.h"
 #include "bsp_tim_op.h"
+#include "drv_foc.h"
 
 typedef struct
 {
@@ -22,10 +23,11 @@ typedef struct
 {
     motor_config_t config_;
     tim_op_t timer_;
-
+    foc_t *foc_;
     bool (*arm)(void);
     bool (*disarm)(bool *was_armed);
     void (*apply_pwm_timings)(uint16_t timings[3], bool tentative);
+    void (*update)(void);
 
 }motor_t;
 
