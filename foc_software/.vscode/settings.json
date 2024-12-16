@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "encoder.h": "c",
+        "bsp_spi_op.h": "c",
+        "drv_encoder.h": "c",
+        "board.h": "c",
+        "bsp_gpio_op.h": "c",
+        "string.h": "c",
+        "utils.h": "c",
+        "float.h": "c",
+        "vofa.h": "c",
+        "usbd_cdc_if.h": "c",
+        "bsp_tim_op.h": "c",
+        "drv_foc.h": "c"
+    }
+}
