@@ -222,6 +222,37 @@ float fast_cos_f32(float x)
     return (cosVal);
 }
 
+int mod(const int dividend, const int divisor)
+{
+    int r = dividend % divisor;
+    if (r < 0)
+        r += divisor;
+    return r;
+}
+
+float wrap_pm(float x, float y)
+{
+#ifdef FPU_FPV4
+    float intval = (float)round_int(x / y);
+#else
+    float intval = nearbyintf(x / y);
+#endif
+    return x - intval * y;
+}
+
+float fmodf_pos(float x, float y)
+{
+    float res = wrap_pm(x, y);
+    if (res < 0)
+        res += y;
+    return res;
+}
+
+float wrap_pm_pi(float x)
+{
+    return wrap_pm(x, 2 * M_PI);
+}
+
 int svm(float alpha, float beta, float *tA, float *tB, float *tC)
 {
     int Sextant;

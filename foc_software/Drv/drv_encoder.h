@@ -3,6 +3,7 @@
 
 #include "board.h"
 #include "bsp_spi_op.h"
+#include "utils.h"
 
 #define ENCODER_SPI_HANDLER hspi1
 #define ENCODER_SPI_CS_GPIO_Port GPIOD

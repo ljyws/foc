@@ -16,6 +16,7 @@
         "motor.h": "c",
         "bsp_adc_op.h": "c",
         "tim.h": "c",
-        "low_level.h": "c"
+        "low_level.h": "c",
+        "foc.h": "c"
     }
 }

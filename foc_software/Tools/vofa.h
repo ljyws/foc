@@ -4,6 +4,7 @@
 #include "board.h"
 #include "drv_encoder.h"
 
+
 #define byte0(dw_temp) (*(char *)(&dw_temp))
 #define byte1(dw_temp) (*((char *)(&dw_temp) + 1))
 #define byte2(dw_temp) (*((char *)(&dw_temp) + 2))

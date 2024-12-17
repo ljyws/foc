@@ -31,6 +31,8 @@
 #include "drv_led.h"
 #include "drv_encoder.h"
 #include "vofa.h"
+#include "low_level.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,7 +101,7 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
-
+start_pwm_adc();
   /* USER CODE END 2 */
 
   /* Infinite loop */
