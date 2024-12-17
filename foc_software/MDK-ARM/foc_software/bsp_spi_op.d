@@ -1,12 +1,12 @@
 foc_software/bsp_spi_op.o: ..\Bsp\bsp_spi_op.c ..\Bsp\bsp_spi_op.h \
-  ..\Core\Inc\board.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\string.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\math.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\float.h \
+  ..\MotorCtrl\board.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\math.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\float.h \
   ..\Core\Inc\main.h ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \
   ..\Core\Inc\stm32g4xx_hal_conf.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h \
@@ -14,22 +14,25 @@ foc_software/bsp_spi_op.o: ..\Bsp\bsp_spi_op.c ..\Bsp\bsp_spi_op.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_cortex.h \
+  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc.h \
+  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_adc.h \
+  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_exti.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash_ex.h \
@@ -44,7 +47,7 @@ foc_software/bsp_spi_op.o: ..\Bsp\bsp_spi_op.c ..\Bsp\bsp_spi_op.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
   ..\Core\Inc\gpio.h ..\Core\Inc\spi.h ..\Core\Inc\tim.h \
-  ..\USB_Device\App\usbd_cdc_if.h \
+  ..\Core\Inc\adc.h ..\USB_Device\App\usbd_cdc_if.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \

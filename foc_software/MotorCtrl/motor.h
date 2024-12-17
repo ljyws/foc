@@ -1,9 +1,11 @@
-#ifndef __DRV_MOTOR_H__
-#define __DRV_MOTOR_H__
+#ifndef __MOTOR_H__
+#define __MOTOR_H__
 
 #include "board.h"
 #include "bsp_tim_op.h"
-#include "drv_foc.h"
+#include "foc.h"
+
+#define MOTOR_TIM_HANDLER htim1
 
 typedef struct
 {
@@ -11,7 +13,8 @@ typedef struct
     int32_t pole_pairs;
 
     float calibration_current;
-    
+    float phase_current_sample_gain;
+    float shunt_conductance_;
     void (*set_phase_inductance)(float value);
     void (*set_phase_resistance)(float value);
     void (*set_current_control_bandwidth)(float value);
@@ -22,15 +25,16 @@ typedef struct
 typedef struct
 {
     motor_config_t config_;
-    tim_op_t timer_;
-    foc_t *foc_;
+    TIM_HandleTypeDef *timer_;
+    foc_t foc_;
     bool (*arm)(void);
     bool (*disarm)(bool *was_armed);
     void (*apply_pwm_timings)(uint16_t timings[3], bool tentative);
     void (*update)(void);
+    float (*phase_current_from_adcval)(uint32_t adc_value);
 
 }motor_t;
-
+extern motor_t motor;
 
 
 

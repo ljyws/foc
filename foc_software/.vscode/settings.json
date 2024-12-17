@@ -11,6 +11,11 @@
         "vofa.h": "c",
         "usbd_cdc_if.h": "c",
         "bsp_tim_op.h": "c",
-        "drv_foc.h": "c"
+        "drv_foc.h": "c",
+        "drv_motor.h": "c",
+        "motor.h": "c",
+        "bsp_adc_op.h": "c",
+        "tim.h": "c",
+        "low_level.h": "c"
     }
 }

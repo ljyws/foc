@@ -1,5 +1,5 @@
-#ifndef __DRV_FOC_H__
-#define __DRV_FOC_H__
+#ifndef _FOC_H__
+#define _FOC_H__
 
 #include "board.h"
 #include "drv_encoder.h"
@@ -42,8 +42,16 @@ struct foc_t
     void (*inverse_clarke)(struct foc_t *self);
     void (*park_transform)(struct foc_t *self);
     void (*inverse_park)(struct foc_t *self);
-    void (*update)(void);
+    void (*update)(struct foc_t *self);
 
 };
+
+
+void foc_sin_cos_cal(struct foc_t *self);
+void foc_clarke_transform(struct foc_t *self);
+void foc_inverse_clarke(struct foc_t *self);
+void foc_park_transform(struct foc_t *self);
+void foc_inverse_park(struct foc_t *self);
+void foc_update(struct foc_t *self);
 
 #endif
