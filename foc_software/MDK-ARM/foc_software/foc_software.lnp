@@ -40,6 +40,8 @@
 "foc_software\motor.o"
 "foc_software\low_level.o"
 "foc_software\board.o"
+"foc_software\controller.o"
+"foc_software\open_loop_controller.o"
 "foc_software\utils.o"
 "foc_software\vofa.o"
 "foc_software\usbd_conf.o"

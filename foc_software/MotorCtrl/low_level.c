@@ -6,6 +6,7 @@ static void adc_sample_enable(void);
 float adc_full_scale = 4096.0f;
 float adc_ref_voltage = 3.3f;
 float vbus_voltage = 12.0f;
+float inv_vbus_voltage = 0.0f;
 
 void start_pwm_adc(void)
 {
@@ -41,12 +42,6 @@ void vbus_sense_adc_cb(uint32_t adc_value)
 {
     float voltage_scale = adc_ref_voltage * VBUS_S_DIVIDER_RATIO / adc_full_scale;
     vbus_voltage = adc_value * voltage_scale;
+    inv_vbus_voltage = 1 / vbus_voltage;
 }
 
-ph_abc_t current_;
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-	vbus_sense_adc_cb(ADC2->JDR1);
-	fetch_and_reset_adcs(&current_);
-	
-}

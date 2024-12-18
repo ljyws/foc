@@ -7,16 +7,16 @@ foc_software/stm32g4xx_hal_gpio.o: \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h \

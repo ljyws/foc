@@ -8,8 +8,6 @@ void foc_update(struct foc_t *self)
     self->sin_cos_cal(self);
     self->clarke_transform(self);
     self->park_transform(self);
-    self->inverse_park(self);
-    svm((self->v_alpha), self->v_beta, &self->dtc.phA, &self->dtc.phB, &self->dtc.phC);
 }
 
 

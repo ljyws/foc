@@ -17,6 +17,8 @@
         "bsp_adc_op.h": "c",
         "tim.h": "c",
         "low_level.h": "c",
-        "foc.h": "c"
+        "foc.h": "c",
+        "open_loop_controller.h": "c",
+        "controller.h": "c"
     }
 }

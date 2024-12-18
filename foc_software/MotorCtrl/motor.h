@@ -29,13 +29,14 @@ typedef struct
     foc_t foc_;
 
     ph_abc_t current_offset;
-
+    
     bool (*arm)(void);
     bool (*disarm)(bool *was_armed);
-    void (*apply_pwm_timings)(uint16_t timings[3], bool tentative);
+    void (*apply_pwm_timings)(uint16_t timings[3]);
     void (*update)(void);
-    ph_abc_t (*phase_current_from_adcval)(uint32_t *adc_value);
+    ph_abc_t (*phase_current_from_adcval)(ph_abc_t adc_value);
     void (*phase_current_update_offset)(void);
+    void (*pwm_update)(void);
 
 }motor_t;
 extern motor_t motor;

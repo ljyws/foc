@@ -1,7 +1,10 @@
 #include "motor.h"
 
-static ph_abc_t motor_phase_current_from_adcval(uint32_t *adc_value);
+static ph_abc_t motor_phase_current_from_adcval(ph_abc_t adc_value);
 static void motor_phase_current_update_offset(void);
+static void motor_update(void);
+static void motor_pwm_update(void);
+static void motor_apply_pwm_timings(uint16_t timings[3]);
 static float CURRENT_ADC_LOWER_BOUND = (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
 static float CURRENT_ADC_UPPER_BOUND = (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
 
@@ -20,32 +23,33 @@ motor_t motor = {
         .inverse_park = foc_inverse_park,
         .update = foc_update,
     },
+
     .current_offset = {0},
     .phase_current_update_offset = motor_phase_current_update_offset,
     .phase_current_from_adcval = motor_phase_current_from_adcval,
-
+    .update = motor_update,
+    .pwm_update = motor_pwm_update,
+    .apply_pwm_timings = motor_apply_pwm_timings,
 };
 
-static ph_abc_t motor_phase_current_from_adcval(uint32_t *adc_value)
+static ph_abc_t motor_phase_current_from_adcval(ph_abc_t adc_value)
 {
     ph_abc_t current = {0};
-//    if ((adc_value[0] < CURRENT_ADC_LOWER_BOUND || adc_value[0] > CURRENT_ADC_UPPER_BOUND) 
-//    && (adc_value[1] < CURRENT_ADC_LOWER_BOUND || adc_value[1] > CURRENT_ADC_UPPER_BOUND) 
-//    && (adc_value[2] < CURRENT_ADC_LOWER_BOUND || adc_value[2] > CURRENT_ADC_UPPER_BOUND))
-//    {
-//        return current;
-//    }
+    if ((adc_value.phA < CURRENT_ADC_LOWER_BOUND || adc_value.phA > CURRENT_ADC_UPPER_BOUND) && (adc_value.phB < CURRENT_ADC_LOWER_BOUND || adc_value.phB > CURRENT_ADC_UPPER_BOUND) && (adc_value.phC < CURRENT_ADC_LOWER_BOUND || adc_value.phC > CURRENT_ADC_UPPER_BOUND))
+    {
+        return current;
+    }
 
-    uint32_t adcval_bal[3];
-
-    adcval_bal[0] = (int)adc_value[0] - motor.current_offset.phA;
-    adcval_bal[1] = (int)adc_value[1] - motor.current_offset.phB;
-    adcval_bal[2] = (int)adc_value[2] - motor.current_offset.phC;
+    ph_abc_t adcval_bal = {
+        .phA = (float)((int)adc_value.phA - motor.current_offset.phA),
+        .phB = (float)((int)adc_value.phB - motor.current_offset.phB),
+        .phC = (float)((int)adc_value.phC - motor.current_offset.phC),
+    };
 
     ph_abc_t amp_out_volt = {
-        .phA = (3.3f / (float)(1 << 12)) * (float)adcval_bal[0],
-        .phB = (3.3f / (float)(1 << 12)) * (float)adcval_bal[1],
-        .phC = (3.3f / (float)(1 << 12)) * (float)adcval_bal[2],
+        .phA = (3.3f / (float)(1 << 12)) * adcval_bal.phA,
+        .phB = (3.3f / (float)(1 << 12)) * adcval_bal.phB,
+        .phC = (3.3f / (float)(1 << 12)) * adcval_bal.phC,
     };
 
     ph_abc_t shunt_volt = {
@@ -75,4 +79,32 @@ static void motor_phase_current_update_offset(void)
     motor.current_offset.phA = sum_a / 1000.0f;
     motor.current_offset.phB = sum_b / 1000.0f;
     motor.current_offset.phC = sum_c / 1000.0f;
+}
+
+static void motor_pwm_update(void)
+{
+    float pwm_timings[3] = {NAN, NAN, NAN};
+
+    svm(motor.foc_.v_alpha, motor.foc_.v_beta, &pwm_timings[0], &pwm_timings[1], &pwm_timings[2]);
+
+    uint16_t next_timings[] = {
+        (uint16_t)(pwm_timings[0] * (float)TIM_1_8_PERIOD_CLOCKS),
+        (uint16_t)(pwm_timings[1] * (float)TIM_1_8_PERIOD_CLOCKS),
+        (uint16_t)(pwm_timings[2] * (float)TIM_1_8_PERIOD_CLOCKS)
+    };
+
+    motor.apply_pwm_timings(next_timings);
+}
+
+static void motor_update(void)
+{
+    motor.foc_.update(&motor.foc_);
+    
+}
+
+static void motor_apply_pwm_timings(uint16_t timings[3])
+{
+    motor.timer_->Instance->CCR1 = timings[0];
+    motor.timer_->Instance->CCR2 = timings[1];
+    motor.timer_->Instance->CCR3 = timings[2];
 }

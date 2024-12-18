@@ -9,8 +9,7 @@
 #define SQRT3_BY_2 (0.86602540378f)
 #define ONE_BY_SQRT3 (0.57735026919f)
 #define TWO_BY_SQRT3 (1.15470053838f)
-
-
+#define wrap_0_2pi(theta) theta = (theta > M_2PI) ? theta - M_2PI : theta; theta = (theta < 0.0f ) ? theta + M_2PI : theta;
 
 int mod(const int dividend, const int divisor);
 

@@ -1,5 +1,5 @@
-foc_software/low_level.o: ..\MotorCtrl\low_level.c \
-  ..\MotorCtrl\low_level.h ..\MotorCtrl\board.h \
+foc_software/controller.o: ..\MotorCtrl\controller.c \
+  ..\MotorCtrl\controller.h ..\MotorCtrl\board.h \
   E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
   E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
@@ -54,6 +54,4 @@ foc_software/low_level.o: ..\MotorCtrl\low_level.c \
   ..\USB_Device\Target\usbd_conf.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
-  ..\Tools\utils.h ..\MotorCtrl\motor.h ..\Bsp\bsp_tim_op.h \
-  ..\MotorCtrl\foc.h ..\Drv\drv_encoder.h ..\Bsp\bsp_spi_op.h \
-  ..\Bsp\bsp_gpio_op.h ..\Bsp\bsp_adc_op.h
+  ..\Tools\utils.h

@@ -3,14 +3,12 @@
 #define MAX_BUFFER_SIZE 1024
 uint8_t send_buf[MAX_BUFFER_SIZE];
 uint16_t cnt = 0;
-extern ph_abc_t current_;
+
 void vofa_start(void)
 {
     vofa_send_data(0,mt6825.phase_);
     vofa_send_data(1, mt6825.pos_abs_);
-	vofa_send_data(2, current_.phA);
-	vofa_send_data(3, current_.phB);
-	vofa_send_data(4, current_.phC);
+
     vofa_sendframetail();
 }
 

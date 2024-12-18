@@ -101,7 +101,7 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
-start_pwm_adc();
+  start_pwm_adc();
   /* USER CODE END 2 */
 
   /* Infinite loop */

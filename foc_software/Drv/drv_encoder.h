@@ -50,6 +50,7 @@ typedef struct
     void (*abs_spi_start_trans)(void);
     bool (*update)(void);
     void (*set_spi_cs)(bool val);
+    bool (*run_offset_calibration)(void);
 
 } encoder_t;
 extern encoder_t mt6825;

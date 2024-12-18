@@ -4,6 +4,7 @@ static void mt6825_set_spi_cs(bool val);
 static void mt6825_sample_now(void);
 static void mt6825_abs_spi_start_trans(void);
 static bool mt6825_update(void);
+static bool mt6825_run_offset_calibration(void);
 
 encoder_t mt6825 = {
     .config_ = {
@@ -41,6 +42,7 @@ encoder_t mt6825 = {
     .set_spi_cs = mt6825_set_spi_cs,
     .sample_now = mt6825_sample_now,
     .abs_spi_start_trans = mt6825_abs_spi_start_trans,
+    .run_offset_calibration = mt6825_run_offset_calibration,
     .update = mt6825_update,
 };
 
@@ -67,6 +69,11 @@ static void mt6825_abs_spi_start_trans(void)
     uint32_t raw = ((rx_data[0] & 0x00FF) << 10) | ((rx_data[1] & 0xFC00) >> 6) | ((rx_data[1] & 0x00F0) >> 4);
 
     mt6825.pos_abs_ = raw;
+}
+
+static bool mt6825_run_offset_calibration(void)
+{
+    
 }
 
 static bool mt6825_update(void)

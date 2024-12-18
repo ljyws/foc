@@ -9,6 +9,10 @@
 #define ADC_1_HANDLER hadc1
 #define ADC_2_HANDLER hadc1
 
+extern float vbus_voltage;
+extern float inv_vbus_voltage;
+
+
 void vbus_sense_adc_cb(uint32_t adc_value);
 void start_pwm_adc(void);
 

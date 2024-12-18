@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32G474RETx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32G4xx_DFP.1.6.0</PackID>
+          <PackID>Keil.STM32G4xx_DFP.1.5.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2001FFFF) IROM(0x8000000-0x807FFFF)  CLOCK(8000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -1179,6 +1179,16 @@
               <FileName>board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MotorCtrl\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>controller.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MotorCtrl\controller.c</FilePath>
+            </File>
+            <File>
+              <FileName>open_loop_controller.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MotorCtrl\open_loop_controller.c</FilePath>
             </File>
           </Files>
         </Group>
