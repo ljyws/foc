@@ -32,6 +32,7 @@
 #include "drv_encoder.h"
 #include "vofa.h"
 #include "low_level.h"
+#include "board.h"
 
 /* USER CODE END Includes */
 
@@ -101,7 +102,9 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
+  board_init();
   start_pwm_adc();
+  motor.phase_current_update_offset();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -111,9 +114,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    mt6825.sample_now();
-    mt6825.update();
-	  vofa_start();
+    //mt6825.sample_now();
+    //mt6825.update();
+
 	  // led1.toggle();
 	  // HAL_Delay(200);
 	  // led2.toggle();

@@ -57,7 +57,7 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define TIM_1_8_PERIOD_CLOCKS 4250
+#define TIM_1_8_PERIOD_CLOCKS 3500
 #define TIM_APB1_CLOCK_HZ 168000000
 #define TIM_APB1_DEADTIME_CLOCKS 40
 #define TIM_APB1_PERIOD_CLOCKS 4096
@@ -70,6 +70,8 @@ void Error_Handler(void);
 #define LED2_GPIO_Port GPIOC
 #define LED3_Pin GPIO_PIN_15
 #define LED3_GPIO_Port GPIOC
+#define DEBUG_SIG_Pin GPIO_PIN_3
+#define DEBUG_SIG_GPIO_Port GPIOC
 #define ENCODER_SPI_CS_Pin GPIO_PIN_2
 #define ENCODER_SPI_CS_GPIO_Port GPIOD
 #define ENCODER_SPI_SCK_Pin GPIO_PIN_3

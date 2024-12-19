@@ -19,6 +19,7 @@
         "low_level.h": "c",
         "foc.h": "c",
         "open_loop_controller.h": "c",
-        "controller.h": "c"
+        "controller.h": "c",
+        "stm32g474xx.h": "c"
     }
 }

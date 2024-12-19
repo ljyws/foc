@@ -34,7 +34,7 @@ typedef struct
     float phC;
 }ph_abc_t;
 
-
+bool board_init();
 bool fetch_and_reset_adcs(ph_abc_t *current);
 	
 #endif

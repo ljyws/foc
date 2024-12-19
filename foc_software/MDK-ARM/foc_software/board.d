@@ -1,11 +1,11 @@
 foc_software/board.o: ..\MotorCtrl\board.c ..\MotorCtrl\board.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\math.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\float.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\float.h \
   ..\Core\Inc\main.h ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \
   ..\Core\Inc\stm32g4xx_hal_conf.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h \
@@ -13,16 +13,16 @@ foc_software/board.o: ..\MotorCtrl\board.c ..\MotorCtrl\board.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h \
@@ -56,4 +56,4 @@ foc_software/board.o: ..\MotorCtrl\board.c ..\MotorCtrl\board.h \
   ..\Tools\utils.h ..\MotorCtrl\low_level.h ..\MotorCtrl\motor.h \
   ..\Bsp\bsp_tim_op.h ..\MotorCtrl\foc.h ..\Drv\drv_encoder.h \
   ..\Bsp\bsp_spi_op.h ..\Bsp\bsp_gpio_op.h ..\Bsp\bsp_adc_op.h \
-  ..\MotorCtrl\open_loop_controller.h
+  ..\MotorCtrl\open_loop_controller.h ..\Tools\vofa.h

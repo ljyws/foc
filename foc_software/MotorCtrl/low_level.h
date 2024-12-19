@@ -7,7 +7,7 @@
 
 
 #define ADC_1_HANDLER hadc1
-#define ADC_2_HANDLER hadc1
+#define ADC_2_HANDLER hadc2
 
 extern float vbus_voltage;
 extern float inv_vbus_voltage;

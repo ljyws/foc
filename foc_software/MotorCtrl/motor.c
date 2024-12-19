@@ -6,7 +6,7 @@ static void motor_update(void);
 static void motor_pwm_update(void);
 static void motor_apply_pwm_timings(uint16_t timings[3]);
 static float CURRENT_ADC_LOWER_BOUND = (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
-static float CURRENT_ADC_UPPER_BOUND = (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
+static float CURRENT_ADC_UPPER_BOUND = (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MAX_VOLT / 3.3f);
 
 motor_t motor = {
     .timer_ = &MOTOR_TIM_HANDLER,

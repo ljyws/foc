@@ -73,7 +73,7 @@ static void mt6825_abs_spi_start_trans(void)
 
 static bool mt6825_run_offset_calibration(void)
 {
-    
+    return true;
 }
 
 static bool mt6825_update(void)

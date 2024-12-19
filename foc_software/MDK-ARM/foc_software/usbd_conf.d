@@ -2,12 +2,12 @@ foc_software/usbd_conf.o: ..\USB_Device\Target\usbd_conf.c \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \
@@ -15,7 +15,7 @@ foc_software/usbd_conf.o: ..\USB_Device\Target\usbd_conf.c \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_def.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h \
@@ -40,9 +40,9 @@ foc_software/usbd_conf.o: ..\USB_Device\Target\usbd_conf.c \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
   ..\USB_Device\Target\usbd_conf.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \

@@ -3,7 +3,7 @@
 
 #include "board.h"
 #include "drv_encoder.h"
-
+#include "motor.h"
 
 #define byte0(dw_temp) (*(char *)(&dw_temp))
 #define byte1(dw_temp) (*((char *)(&dw_temp) + 1))
