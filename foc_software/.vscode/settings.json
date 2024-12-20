@@ -20,6 +20,9 @@
         "foc.h": "c",
         "open_loop_controller.h": "c",
         "controller.h": "c",
-        "stm32g474xx.h": "c"
+        "stm32g474xx.h": "c",
+        "gpio.h": "c",
+        "main.h": "c",
+        "axis.h": "c"
     }
 }

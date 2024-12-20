@@ -41,42 +41,39 @@ bool fetch_and_reset_adcs(ph_abc_t *current)
 }
 
 volatile bool counting_down_ = false;
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void tim1_period_elapsed_callback(void)
 {
-    if (htim->Instance == TIM1)
+    __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_UPDATE);
+    vofa_start();
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
+    bool counting_down = TIM1->CR1 & TIM_CR1_DIR;
+    bool timer_update_missed = (counting_down_ == counting_down);
+    counting_down_ = counting_down;
+
+    if (!counting_down)
     {
-        __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_UPDATE);
-        vofa_start();
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
-        bool counting_down = TIM1->CR1 & TIM_CR1_DIR;
-        bool timer_update_missed = (counting_down_ == counting_down);
-        counting_down_ = counting_down;
-
-        if (!counting_down)
-        {
-            mt6825.sample_now();
-            NVIC->STIR = ControlLoop_IRQn;
-        }
-        else
-        {
-            TIM1->CCR1 =
-            TIM1->CCR2 =
-            TIM1->CCR3 =
-                        TIM_1_8_PERIOD_CLOCKS / 2;
-        }
-
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
-
-        //        ph_abc_t current_;
-
-        // open_loop_controller.update(0.5, 0);
-        //  update
-        //   mt6825.update();
-        //   motor.update();
-
-        // pwm_update
-        //  motor.pwm_update();
+        mt6825.sample_now();
+        NVIC->STIR = ControlLoop_IRQn;
     }
+    else
+    {
+        TIM1->CCR1 =
+            TIM1->CCR2 =
+                TIM1->CCR3 =
+                    TIM_1_8_PERIOD_CLOCKS / 2;
+    }
+
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
+
+    //        ph_abc_t current_;
+
+    // open_loop_controller.update(0.5, 0);
+    //  update
+    //   mt6825.update();
+    //   motor.update();
+
+    // pwm_update
+    //  motor.pwm_update();
 }
 
 void ControlLoop_IRQHandler(void)

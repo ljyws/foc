@@ -154,8 +154,8 @@ static bool motor_measure_phase_resistance(float test_current, float max_voltage
 
 
 
-    float vfactor = 1.0f / ((2.0f / 3.0f) * *vbus_voltage);
-    test_mod_ = test_voltage_ * vfactor;
+//    float vfactor = 1.0f / ((2.0f / 3.0f) * *vbus_voltage);
+//    test_mod_ = test_voltage_ * vfactor;
 
 
 }

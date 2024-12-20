@@ -15,6 +15,8 @@
 #include "tim.h"
 #include "adc.h"
 #include "usbd_cdc_if.h"
+#include "cmsis_os.h"
+#include "task.h"
 
 #include "utils.h"
 
@@ -36,5 +38,5 @@ typedef struct
 
 bool board_init();
 bool fetch_and_reset_adcs(ph_abc_t *current);
-	
+void tim1_period_elapsed_callback();
 #endif
