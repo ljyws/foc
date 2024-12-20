@@ -48,3 +48,46 @@ void open_loop_controller_update(float vd_ref, float vq_ref)
     motor.timer_->Instance->CCR2 = next_timings[1];
     motor.timer_->Instance->CCR3 = next_timings[2];
 }
+
+// void FOC_voltage(float Vd_set, float Vq_set, float phase)
+// {
+//     // Clarke transform
+//     float i_alpha, i_beta;
+
+//     motor.foc_.clarke_transform()
+//     clarke_transform(Foc.i_a, Foc.i_b, Foc.i_c, &i_alpha, &i_beta);
+
+//     // Park transform
+//     float i_d, i_q;
+//     park_transform(i_alpha, i_beta, phase, &i_d, &i_q);
+
+//     // Used for report
+//     Foc.i_q = i_q;
+//     UTILS_LP_FAST(Foc.i_q_filt, Foc.i_q, 0.01f);
+//     Foc.i_d = i_d;
+//     UTILS_LP_FAST(Foc.i_d_filt, Foc.i_d, 0.01f);
+
+//     // Modulation
+//     float V_to_mod = 1.0f / (Foc.v_bus_filt * 2.0f / 3.0f);
+//     float mod_d    = V_to_mod * Vd_set;
+//     float mod_q    = V_to_mod * Vq_set;
+
+//     // Vector modulation saturation, lock integrator if saturated
+//     float mod_scalefactor = 0.9f * SQRT3_BY_2 / sqrtf(SQ(mod_d) + SQ(mod_q));
+//     if (mod_scalefactor < 1.0f) {
+//         mod_d *= mod_scalefactor;
+//         mod_q *= mod_scalefactor;
+//     }
+
+//     // Inverse park transform
+//     float mod_alpha;
+//     float mod_beta;
+//     inverse_park(mod_d, mod_q, phase, &mod_alpha, &mod_beta);
+
+//     // SVM
+//     if (0 == svm(mod_alpha, mod_beta, &Foc.dtc_a, &Foc.dtc_b, &Foc.dtc_c)) {
+//         set_a_duty((uint16_t) (Foc.dtc_a * (float) HALF_PWM_PERIOD_CYCLES));
+//         set_b_duty((uint16_t) (Foc.dtc_b * (float) HALF_PWM_PERIOD_CYCLES));
+//         set_c_duty((uint16_t) (Foc.dtc_c * (float) HALF_PWM_PERIOD_CYCLES));
+//     }
+// }

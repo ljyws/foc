@@ -10,9 +10,6 @@ float inv_vbus_voltage = 0.0f;
 
 void start_pwm_adc(void)
 {
-
-	
-	
     // init pwm
     int half_load = TIM_1_8_PERIOD_CLOCKS / 2;
     motor.timer_->Instance->CCR1 = half_load;
@@ -41,6 +38,7 @@ void start_pwm_adc(void)
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 3400);
     __HAL_TIM_ENABLE_IT(motor.timer_, TIM_IT_UPDATE);
 	
+	motor.phase_current_update_offset();
 }
 
 void vbus_sense_adc_cb(uint32_t adc_value)

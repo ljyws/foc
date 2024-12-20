@@ -35,6 +35,9 @@ struct foc_t
     float v_alpha;
     float v_beta;
 
+    float kp_gain_;
+    float ki_gain_;
+
     void (*sin_cos_cal)(struct foc_t *self);
     void (*clarke_transform)(struct foc_t *self);
     void (*inverse_clarke)(struct foc_t *self);

@@ -104,7 +104,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   board_init();
   start_pwm_adc();
-  motor.phase_current_update_offset();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
